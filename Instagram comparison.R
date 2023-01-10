@@ -1,11 +1,13 @@
+# if you have not installed the package rjson, make sure to install with the following code
+# install.packages("rjson")
 library(rjson)
-# open files
+# open files, make sure to change directory to the file folder
 followers <- "followers.json"
 followers_data <- fromJSON(file=followers)
 following <- "following.json"
 following_data <- fromJSON(file=following)
 
-
+# function appending to get the user names from the files
 appending<-function(x){
   followinglist=list()
   i=1
